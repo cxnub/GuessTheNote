@@ -1,0 +1,8 @@
+.hidden {
+    display: none !important;
+}
+
+button:disabled {
+    background-color: var(--text-muted);
+    cursor: not-allowed;
+}

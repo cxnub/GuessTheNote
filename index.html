@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Piano Note!</title>
+    <link rel="stylesheet" href="resources/css/styles.css">
+    <link rel="stylesheet" href="resources/css/utils.css">
+    <link rel="stylesheet" href="resources/css/colors.css">
+    <link rel="stylesheet" href="resources/css/piano.css">
+    <link href="/assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="/assets/fontawesome//css/solid.css" rel="stylesheet" />
+</head>
+
+<body>
+    <button id="theme-btn"><i class="fa-solid fa-sun"></i></button>
+    <h1>Welcome to Guess the Piano Note!</h1>
+    <p>Click the start button and try to guess the note played on the piano.</p>
+    <div class="btn-container">
+        <button id="start-btn">Start Guessing!</button>
+        <button id="settings-btn"><i class="fa-solid fa-cog" style="margin-right: 8px;"></i>Settings</button>
+    </div>
+    <div id="settings" class="hidden">
+        <h2>Settings</h2>
+        <div class="settings-body">
+            <div class="octave-range">
+                <label for="octave">Octave Range</label>
+                <input type="range" id="octave-min" min="1" max="7" value="3" step="1">
+                <input type="range" id="octave-max" min="1" max="7" value="5" step="1">
+                <span id="octave-range-label">3 - 5</span>
+            </div>
+            <div class="difficulty">
+                <label for="difficulty">Difficulty</label>
+                <select id="difficulty">
+                    <option value="1">Easy - 1 Note</option>
+                    <option value="2">Medium - 2 Notes</option>
+                    <option value="3">Hard - 3 Notes</option>
+                    <option value="4">Extreme - 4 Notes</option>
+                    <option value="5">Insane - 5 Notes</option>
+                    <option value="6">Impossible - 6 Notes</option>
+                </select>
+            </div>
+            <div class="play-together">
+                <label for="play-together">Play Together (harder)</label>
+                <input type="checkbox" id="play-together">
+            </div>
+        </div>
+
+    </div>
+    <div id="game">
+        <div id="piano"></div>
+    </div>
+    <div id="game-state" class="hidden">
+        <p>Selected Notes: <span id="selected-notes"></span></p>
+        <div style="display: flex; gap: 12px;">
+            <button id="play-notes"><i class="fa-solid fa-volume-high" style="margin-right: 8px;"></i>Play
+                Notes</button>
+            <button id="check-btn"><i class="fa-solid fa-check" style="margin-right: 8px;"></i>Check</button>
+        </div>
+        <div id="result" class="result-card hidden">
+            <div class="result-div">
+                <span class="result-label correct-label"><i class="fa-solid fa-check"></i> Correct:</span>
+                <span id="correct-notes" class="result-badge correct-badge"></span>
+                <span id="correct-count" class="result-count"></span>
+            </div>
+            <div class="result-div">
+                <span class="result-label incorrect-label"><i class="fa-solid fa-xmark"></i> Incorrect:</span>
+                <span id="incorrect-notes" class="result-badge incorrect-badge"></span>
+                <span id="incorrect-count" class="result-count"></span>
+            </div>
+            <div class="result-div">
+                <span class="result-label missed-label"><i class="fa-solid fa-question"></i> Missed:</span>
+                <span id="missed-notes" class="result-badge missed-badge"></span>
+                <span id="missed-count" class="result-count"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="resources/js/script.js" type="module"></script>
+    <script src="resources/js/game.js" type="module"></script>
+    <script src="resources/js/state.js" type="module"></script>
+    <script src="resources/js/piano.js" type="module"></script>
+    <script src="resources/js/settings.js" type="module"></script>
+</body>
+
+</html>

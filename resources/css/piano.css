@@ -1,0 +1,56 @@
+#piano {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    position: relative;
+}
+
+.key {
+    width: 40px;
+    height: 140px;
+    background-color: white;
+    border: 1px solid var(--border);
+    margin: 1px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.key:hover {
+    cursor: pointer;
+    background-color: var(--info);
+}
+
+.key.correct {
+    background-color: var(--success) !important;
+}
+
+.key.incorrect {
+    background-color: var(--danger) !important;
+}
+
+.key.missed {
+    background-color: var(--warning) !important;
+}
+
+.key.white {
+    border: 1px solid var(--border);
+}
+
+.key.black {
+    width: 30px;
+    height: 80px;
+    background-color: black;
+    position: absolute;
+    left: 25px;
+    border-radius: 3px;
+    margin-top: 0;
+    z-index: 1;
+}
+
+.key.down {
+    background-color: var(--highlight) !important;
+}
+
+.key.selected {
+    background-color: var(--primary) !important;
+}
