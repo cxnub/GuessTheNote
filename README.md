@@ -47,6 +47,7 @@ GuessTheNote/
 │   ├── audio/         # Piano note audio files (mp3)
 │   ├── css/           # Stylesheets
 │   └── js/            # JavaScript modules
+├── images/            # Image assets
 └── README.md
 ```
 
